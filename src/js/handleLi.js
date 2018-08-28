@@ -16,7 +16,7 @@ const dropLi = (event) => {
 	event.target.appendChild(document.getElementById(data));
 	event.target.removeChild(document.getElementById(data));
 
-	const index = window.jsonPlaylistData.GameObject.LevelPlaylist[0].LevelName.indexOf(data);
+	const index = window.jsonPlaylistData.GameObject.LevelPlaylist[0].LevelPath.indexOf(data);
 	window.jsonPlaylistData.GameObject.LevelPlaylist[0].LevelName.splice(index, 1);
 	window.jsonPlaylistData.GameObject.LevelPlaylist[0].GameMode.splice(index, 1);
 	window.jsonPlaylistData.GameObject.LevelPlaylist[0].LevelPath.splice(index, 1);

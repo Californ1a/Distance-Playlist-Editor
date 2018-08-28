@@ -17,7 +17,7 @@ const createLevelList = (ln) => {
 		const li = document.createElement("li");
 		li.classList.add("mapitem");
 		li.draggable = true;
-		li.id = window.jsonPlaylistData.GameObject.LevelPlaylist[0].LevelName[i];
+		li.id = window.jsonPlaylistData.GameObject.LevelPlaylist[0].LevelPath[i];
 		li.innerText = ln[i];
 		li.addEventListener("dragstart", handleLi.drag);
 		ul.appendChild(li);
