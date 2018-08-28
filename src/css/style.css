@@ -1,0 +1,57 @@
+body {
+	color: #FFF;
+}
+
+#drop {
+	/* margin: auto; */
+	/* padding-left: 24px; */
+	/* margin-right: 40px; */
+	padding-top: 2px;
+	padding-bottom: 15px;
+	border-style: dashed;
+	width: 100%;
+	cursor: pointer;
+	user-select: none;
+	white-space: nowrap;
+	overflow-x: auto;
+	float: left;
+	clear: none;
+}
+
+#pad {
+	padding-left: 24px;
+	padding-right: 24px;
+}
+
+li.mapitem {
+	padding: 5px;
+	border: 1px solid gray;
+	text-align: center;
+	margin-bottom: 2px;
+	margin-top: 2px;
+	cursor: move;
+	/* cursor: grab; */
+}
+
+li.mapitem:active {
+	cursor: grabbing;
+}
+
+div.trash {
+	float: right;
+	clear: none;
+	padding: 20px;
+	border: 1px solid white;
+}
+
+ul.maplist {
+	padding: 0px;
+	list-style: none;
+}
+
+div.save {
+	float: right;
+	clear: right;
+	padding: 20px;
+	margin-top: 20px;
+}

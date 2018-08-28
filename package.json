@@ -1,0 +1,28 @@
+{
+	"name": "distance-playlist-editor",
+	"productName": "Distance Playlist Editor",
+	"version": "0.1.0",
+	"description": "",
+	"main": "app.js",
+	"scripts": {
+		"start": "electron .",
+		"buildit": "electron-builder",
+		"pack": "electron-zip-packager ./ --overwrite --out=dist",
+		"pack:all": "electron-zip-packager ./ --platform=darwin,win32,linux --arch=x64,ia32 --overwrite --out=dist",
+		"build": "npm run pack:all"
+	},
+	"author": "Californ1a",
+	"license": "ISC",
+	"dependencies": {
+		"electron-is-dev": "0.3.0",
+		"electron-require": "0.3.0",
+		"stream-to-blob": "1.0.1",
+		"xml2js": "0.4.19",
+		"xmlbuilder": "10.0.0"
+	},
+	"devDependencies": {
+		"electron": "2.0.8",
+		"electron-builder": "^20.28.2",
+		"electron-zip-packager": "^4.0.2"
+	}
+}
