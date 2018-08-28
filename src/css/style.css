@@ -14,6 +14,7 @@ body {
 	user-select: none;
 	white-space: nowrap;
 	overflow-x: auto;
+	overflow-wrap: break-word;
 	float: left;
 	clear: none;
 }
@@ -38,8 +39,11 @@ li.mapitem:active {
 }
 
 div.trash {
-	float: right;
-	clear: none;
+	position: fixed;
+	top: 5px;
+	right: 5px;
+	/* float: right;
+	clear: none; */
 	padding: 20px;
 	border: 1px solid white;
 }
@@ -50,8 +54,11 @@ ul.maplist {
 }
 
 div.save {
-	float: right;
-	clear: right;
+	position: fixed;
+	top: 50px;
+	right: 5px;
+	/* float: right;
+	clear: right; */
 	padding: 20px;
 	margin-top: 20px;
 }
