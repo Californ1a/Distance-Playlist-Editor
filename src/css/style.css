@@ -38,13 +38,16 @@ li.mapitem:active {
 	cursor: grabbing;
 }
 
-div.trash {
+div.sidebar {
 	position: fixed;
-	top: 5px;
 	right: 5px;
 	/* float: right;
-	clear: none; */
+	clear: right; */
 	padding: 20px;
+}
+
+div.trash {
+	top: 5px;
 	border: 1px solid white;
 }
 
@@ -53,12 +56,11 @@ ul.maplist {
 	list-style: none;
 }
 
-div.save {
-	position: fixed;
+div.buttons {
 	top: 50px;
-	right: 5px;
-	/* float: right;
-	clear: right; */
-	padding: 20px;
 	margin-top: 20px;
+}
+
+#savebutton, #clearbutton {
+	margin-bottom: 15px;
 }

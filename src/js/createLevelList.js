@@ -1,6 +1,7 @@
 const rq = require("electron-require");
 const handleLi = rq("./js/handleLi.js");
 const saveXML = rq("./js/save.js");
+const remote = require("electron").remote;
 
 const padd = (n, width, z) => {
 	z = z || "0";
@@ -31,6 +32,7 @@ const createLevelList = (ln) => {
 	}
 
 	const trash = document.createElement("div");
+	trash.classList.add("sidebar");
 	trash.classList.add("trash");
 	trash.id = "trash";
 	trash.innerText = "Delete";
@@ -38,8 +40,9 @@ const createLevelList = (ln) => {
 	trash.addEventListener("dragover", handleLi.dragOver);
 	document.body.appendChild(trash);
 
-	const save = document.createElement("div");
-	save.classList.add("save");
+	const buttons = document.createElement("div");
+	buttons.classList.add("sidebar");
+	buttons.classList.add("buttons");
 
 	const savebutton = document.createElement("button");
 	savebutton.type = "button";
@@ -49,8 +52,18 @@ const createLevelList = (ln) => {
 		saveXML();
 	});
 
-	save.appendChild(savebutton);
-	document.body.appendChild(save);
+	const clearbutton = document.createElement("button");
+	clearbutton.type = "button";
+	clearbutton.id = "clearbutton";
+	clearbutton.innerText = "Clear";
+	clearbutton.addEventListener("click", () => {
+		remote.getCurrentWebContents().reload();
+	});
+
+	buttons.appendChild(savebutton);
+	buttons.appendChild(document.createElement("br"));
+	buttons.appendChild(clearbutton);
+	document.body.appendChild(buttons);
 
 };
 
