@@ -12,7 +12,7 @@ const isDev = require("electron-is-dev");
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
 let win;
-//app.disableHardwareAcceleration();
+app.disableHardwareAcceleration();
 
 function createWindow() {
 	// Create the browser window.
