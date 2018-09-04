@@ -14,8 +14,10 @@
 	"author": "Californ1a",
 	"license": "ISC",
 	"dependencies": {
+		"array-move": "^1.0.0",
 		"electron-is-dev": "0.3.0",
 		"electron-require": "0.3.0",
+		"sortablejs": "1.7.0",
 		"stream-to-blob": "1.0.1",
 		"xml2js": "0.4.19",
 		"xmlbuilder": "10.0.0"

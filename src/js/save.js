@@ -7,7 +7,7 @@ const dialog = rq.electron("dialog");
 const saveXML = () => {
 	const data = window.jsonPlaylistData;
 	dialog.showSaveDialog({
-		defaultPath: "unplayed",
+		defaultPath: data.GameObject.LevelPlaylist[0].PlaylistName[0],
 		filters: [{
 			name: "Playlist",
 			extensions: ["xml"]

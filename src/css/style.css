@@ -51,6 +51,10 @@ div.trash {
 	border: 1px solid white;
 }
 
+div.trash ul, div.trash li {
+	display: none;
+}
+
 ul.maplist {
 	padding: 0px;
 	list-style: none;
