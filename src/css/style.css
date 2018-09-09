@@ -68,3 +68,9 @@ div.buttons {
 #savebutton, #clearbutton {
 	margin-bottom: 15px;
 }
+
+p.count {
+	width: max-content;
+	float: left;
+	padding: 5px;
+}

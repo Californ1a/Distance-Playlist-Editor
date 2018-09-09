@@ -82,8 +82,15 @@ const createLevelList = (ln) => {
 			window.jsonPlaylistData.GameObject.LevelPlaylist[0].LevelName.splice(index, 1);
 			window.jsonPlaylistData.GameObject.LevelPlaylist[0].GameMode.splice(index, 1);
 			window.jsonPlaylistData.GameObject.LevelPlaylist[0].LevelPath.splice(index, 1);
+
+			document.getElementsByClassName("count")[0].innerText = `Count: ${window.jsonPlaylistData.GameObject.LevelPlaylist[0].LevelName.length}`;
 		}
 	});
+
+	const count = document.createElement("p");
+	count.classList.add("count");
+	count.innerText = `Count: ${window.jsonPlaylistData.GameObject.LevelPlaylist[0].LevelName.length}`;
+	document.body.appendChild(count);
 
 	const buttons = document.createElement("div");
 	buttons.classList.add("sidebar");
