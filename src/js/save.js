@@ -30,7 +30,9 @@ const saveXML = () => {
 			lp.ele("PlaylistName", path.basename(filename).slice(0, -4));
 			lp.ele("NumberOfLevelsInPlaylist", reslp.LevelName.length);
 			lp.ele("ModeAndLevelInfoVersion", reslp.ModeAndLevelInfoVersion[0]);
-			lp.ele("RequiredMedalCount", reslp.RequiredMedalCount[0]);
+			if (parseInt(trans.Version) >= 2) {
+				lp.ele("RequiredMedalCount", reslp.RequiredMedalCount[0]);
+			}
 			for (let i = 0; i < reslp.LevelName.length; i++) {
 				lp.ele("GameMode", reslp.GameMode[i]);
 				lp.ele("LevelName", reslp.LevelName[i]);
