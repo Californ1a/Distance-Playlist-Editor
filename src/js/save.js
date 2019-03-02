@@ -30,8 +30,8 @@ const saveXML = () => {
 			lp.ele("PlaylistName", path.basename(filename).slice(0, -4));
 			lp.ele("NumberOfLevelsInPlaylist", reslp.LevelName.length);
 			lp.ele("ModeAndLevelInfoVersion", reslp.ModeAndLevelInfoVersion[0]);
-			console.log("parseInt(reslp[\"$\"].Version)", parseInt(reslp["$"].Version));
-			if (parseInt(reslp["$"].Version) >= 2) {
+			// console.log("parseInt(reslp[\"$\"].Version)", parseInt(reslp["$"].Version));
+			if (reslp.RequiredMedalCount && reslp.RequiredMedalCount[0]) {
 				console.log("reslp.RequiredMedalCount[0]", reslp.RequiredMedalCount[0]);
 				lp.ele("RequiredMedalCount", reslp.RequiredMedalCount[0]);
 			}
@@ -49,8 +49,9 @@ const saveXML = () => {
 				}
 				console.log(`Saved ${filename}`);
 			});
+		} else {
+			console.log("Cancelled Save");
 		}
-		console.log("Cancelled Save");
 	});
 };
 
